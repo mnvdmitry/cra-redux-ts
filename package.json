@@ -2,6 +2,70 @@
   "name": "cra-ts-redux-template",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "comma-dangle": [
+        "error",
+        "never"
+      ],
+      "object-curly-newline": [
+        "error",
+        {
+          "multiline": true,
+          "consistent": true
+        }
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "no-var": "error",
+      "prefer-const": "off",
+      "max-len": [
+        "error",
+        80
+      ],
+      "template-curly-spacing": [
+        "error",
+        "never"
+      ],
+      "prefer-arrow-callback": "error",
+      "no-dupe-class-members": "error",
+      "no-this-before-super": "error",
+      "prefer-rest-params": "error",
+      "constructor-super": "error",
+      "object-shorthand": "error",
+      "require-yield": "error",
+      "arrow-spacing": "error",
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "jsx-a11y/anchor-is-valid": [
+        "error",
+        {
+          "components": [
+            "Link"
+          ],
+          "specialLink": [
+            "hrefLeft",
+            "hrefRight"
+          ],
+          "aspects": [
+            "invalidHref",
+            "preferButton"
+          ]
+        }
+      ]
+    }
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -15,15 +79,6 @@
     "react-scripts": "3.4.1",
     "typescript": "^3.7.5"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -35,5 +90,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4"
   }
 }
