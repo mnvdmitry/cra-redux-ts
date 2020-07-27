@@ -2,6 +2,7 @@ import React from 'react';
 import { Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
+import 'styles/common.css';
 import { history } from 'lib/navigation';
 import { Routes } from 'pages';
 import { configureStore } from 'store';
