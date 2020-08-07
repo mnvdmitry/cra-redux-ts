@@ -16,7 +16,12 @@
     }
   },
   "eslintConfig": {
-    "extends": "react-app",
+    "extends": [
+      "react-app"
+    ],
+    "plugins": [
+      "import"
+    ],
     "rules": {
       "comma-dangle": [
         "error",
@@ -52,23 +57,59 @@
       "require-yield": "error",
       "arrow-spacing": "error",
       "arrow-parens": [
-        "error",
+        2,
         "always"
       ],
-      "jsx-a11y/anchor-is-valid": [
+      "import/first": 2,
+      "import/no-duplicates": 2,
+      "import/newline-after-import": 1,
+      "import/no-named-default": 2,
+      "import/order": [
         "error",
         {
-          "components": [
-            "Link"
+          "groups": [
+            [
+              "builtin",
+              "external"
+            ],
+            "internal",
+            [
+              "index",
+              "sibling",
+              "parent"
+            ],
+            "object"
           ],
-          "specialLink": [
-            "hrefLeft",
-            "hrefRight"
+          "pathGroups": [
+            {
+              "pattern": "components/**/*",
+              "group": "internal"
+            },
+            {
+              "pattern": "lib/**/*",
+              "group": "internal"
+            },
+            {
+              "pattern": "pages",
+              "group": "internal"
+            },
+            {
+              "pattern": "store",
+              "group": "internal"
+            },
+            {
+              "pattern": "styles/**/*",
+              "group": "internal"
+            },
+            {
+              "pattern": "utility-types/**/*",
+              "group": "external"
+            }
           ],
-          "aspects": [
-            "invalidHref",
-            "preferButton"
-          ]
+          "pathGroupsExcludedImportTypes": [
+            "builtin"
+          ],
+          "newlines-between": "always"
         }
       ]
     }

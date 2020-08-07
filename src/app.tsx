@@ -2,10 +2,11 @@ import React from 'react';
 import { Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import 'styles/common.css';
-import { history } from 'lib/navigation';
-import { Routes } from 'pages';
 import { configureStore } from 'store';
+import { Routes } from 'pages';
+import { history } from 'lib/navigation';
+
+import 'styles/common.css';
 
 function App() {
   let store = configureStore();

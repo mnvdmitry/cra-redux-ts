@@ -1,8 +1,9 @@
 import React from 'react';
 
+import { cn } from 'lib/utils/class-names';
+
 import s from './loader.module.css';
 import { Props } from './loader.types';
-import { cn } from 'lib/utils/class-names';
 
 function Loader({ size, color, className, attributes }: Props) {
   let rootClassNames = cn(

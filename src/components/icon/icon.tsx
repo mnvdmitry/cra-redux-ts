@@ -1,8 +1,9 @@
 import React from 'react';
 
+import { cn } from 'lib/utils/class-names';
+
 import s from './icon.module.css';
 import { Props } from './icon.types';
-import { cn } from 'lib/utils/class-names';
 
 export const Icon = ({
   svg: Component,

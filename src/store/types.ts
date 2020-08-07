@@ -1,6 +1,5 @@
 import { Action } from 'redux';
 import { ThunkAction } from 'redux-thunk';
-
 import { StateTypeRedux } from 'utility-types';
 
 export type RootState = StateTypeRedux<
